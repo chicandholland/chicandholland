@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.3rem;
+    --chart-1: 221.2 83.2% 53.3%;
+    --chart-2: 212 95% 68%;
+    --chart-3: 216 92% 60%;
+    --chart-4: 210 98% 78%;
+    --chart-5: 212 97% 87%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 221.2 83.2% 53.3%;
+    --chart-2: 212 95% 68%;
+    --chart-3: 216 92% 60%;
+    --chart-4: 210 98% 78%;
+    --chart-5: 212 97% 87%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .footer-links {
+    @apply text-primary-foreground hover:text-destructive;
+  }
+}
+
+@layer utilities {
+  .popover-content-width-full {
+    width: var(--radix-popover-trigger-width);
+    max-height: var(--radix-popover-content-available-height);
+  }
+}
+
+/* ::-webkit-scrollbar {
+  height: 4px;
+  background: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+} */
+.react-image-magnify__image {
+  object-fit: cover; /* Ensure image covers the container without stretching */
+  width: 100%;
+}
+
+.react-image-magnify__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.embla__slide {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+/* header media queries for logo */
+
+/* iPhone SE (1st gen, 5s) - 320px */
+@media screen and (max-width: 320px) {
+  .logo-ios-se {
+    margin-left: 2rem; /* ml-8 */
+  }
+}
+
+/* iPhone 6/7/8/SE (2nd gen) - 375px (Primary iOS target) */
+@media screen and (max-width: 375px) and (min-width: 321px) {
+  .logo-ios-standard {
+    margin-left: 2.5rem; /* ml-10 */
+  }
+}
+
+/* iPhone X/11/12/13/14 - 390px (Primary iOS target) */
+@media screen and (max-width: 390px) and (min-width: 376px) {
+  .logo-ios-x-series {
+    margin-left: 2.75rem; /* ml-11 */
+  }
+}
+
+/* iPhone 6/7/8 Plus - 414px (Primary iOS target) */
+@media screen and (max-width: 414px) and (min-width: 391px) {
+  .logo-ios-plus {
+    margin-left: 3rem; /* ml-12 */
+  }
+}
+
+/* iPhone 12/13/14 Pro Max - 428px (Primary iOS target) */
+@media screen and (max-width: 428px) and (min-width: 415px) {
+  .logo-ios-pro-max {
+    margin-left: 3.25rem; /* ml-13 */
+  }
+}
+
+/* iPhone 15 Pro Max - 430px (Latest iOS) */
+@media screen and (max-width: 430px) and (min-width: 429px) {
+  .logo-ios-15-pro-max {
+    margin-left: 3.25rem; /* ml-13 */
+  }
+}
+
+/* Android fallback for larger screens */
+@media screen and (min-width: 431px) and (max-width: 767px) {
+  .logo-android-fallback {
+    margin-left: 3.5rem; /* ml-14 */
+  }
+}
